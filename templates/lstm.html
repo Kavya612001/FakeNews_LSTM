@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection using LSTM</title>
+    <!--<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style1.css')}}">-->    
+</head>
+
+<body style="background-color:powderblue;"->
+    <div class="main-container">
+        <div class="form-container">
+            <div class="form-body" style="text-align:center;">
+                <h1 style="text-align:center;">Online Fake Content Identification</h1>
+                <form action="" class="the-form" method="POST" style="text-align:center;">
+
+                    <label for="Date"><h3>Paste the news content below:</h3></label>
+                    <textarea name="news" rows="4" cols="50"></textarea>
+                    <br><br>
+                    <input type="submit" class="btn" value="Submit" style="width:150px; height:40px;">
+                </form>
+                {%if dnews%}
+                    <p>{{dnews}}</p>
+                {%endif%}
+                {%if t_d=='True News' %}
+                    <p><h1>True News</h1></p>
+                    <br>
+                {%elif t_d=='False News'%}
+                    <p><h1>False News</h1></p>
+                    <br>
+                {% endif %}                
+
+            </div>
+            <!-- FORM BODY-->
+
+            <div class="form-footer">
+
+            </div>
+            <!-- FORM FOOTER -->
+
+        </div>
+        <!-- FORM CONTAINER -->
+    </div>
+
+</body>
+</html>
